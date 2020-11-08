@@ -1,0 +1,9 @@
+[postegres_props]
+host = localhost
+port = 5432
+user = postgres
+password = postgres
+dbname = spark
+table_name = spark.emp
+driver = org.postgresql.Driver
+maven_packages = org.postgresql:postgresql:42.2.10
