@@ -72,5 +72,15 @@ if __name__ == "__main__":
     #                                   "comm": col("newData.comm"),
     #                                   "deptno": col("newData.deptno")}) \
     #     .execute()
+    
+    # Delete from delta file when condition matched 
+    # deltaTable = DeltaTable.forPath(spark, sys.argv[2])
+    # deltaTable.alias("oldData") \
+    #     .merge(
+    #     df.alias("newData"),
+    #     "oldData.empno = newData.empno") \
+    #     .whenMatchedDelete() \
+    # .execute()
+    
     spark.stop()
     logger.info("application stopped")
